@@ -1,13 +1,30 @@
 {
   "name": "storage-viewer",
   "description": "A simple JavaScript library to interact with browser Web Storage API (localStorage and sessionStorage).",
-  "version": "1.0.0",
-  "main": "index.js",
-  "type": "module",
+  "version": "1.0.2",
+  "main": "dist/cjs/index.js",
+  "module": "dist/mjs/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "npm run build && http-server -p 8080 --cors",
+    "build": "npm run build:cjs && npm run build:mjs",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "build:mjs": "tsc --module es2015 --outDir dist/mjs",
+    "prepublishOnly": "npm run build"
   },
-  "keywords": [],
+  "keywords": [
+    "storage",
+    "display",
+    "browser"
+  ],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "http-server": "^14.1.1",
+    "typescript": "^5.8.2"
+  }
 }

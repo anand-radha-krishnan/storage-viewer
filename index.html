@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Storage Tabs Test</title>
+</head>
+<body>
+<script type="module">
+import { displayStorageTabs } from './dist/mjs/index.js';
+
+// Set some test data
+document.cookie = "testCookie=cookieValue";
+localStorage.setItem("testLocal", "localValue");
+sessionStorage.setItem("testSession", "sessionValue");
+
+displayStorageTabs();
+</script>
+</body>
+</html>
