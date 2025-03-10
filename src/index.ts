@@ -20,6 +20,7 @@ export function displayStorageTabs(): void {
     tabButton.style.border = "none";
     tabButton.style.backgroundColor = "#f1f1f1";
     tabButton.style.fontWeight = "bold";
+    tabButton.style.cursor = "pointer";
 
     const tabContent = document.createElement("div");
     tabContent.style.display = "none"; // Initially hidden
