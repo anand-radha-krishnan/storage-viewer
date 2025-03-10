@@ -1,0 +1,13 @@
+{
+  "name": "storage-viewer",
+  "description": "A simple JavaScript library to interact with browser Web Storage API (localStorage and sessionStorage).",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
